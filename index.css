@@ -1,0 +1,191 @@
+table {
+    overflow: hidden;
+    position: absolute;
+}
+
+.timetable
+{
+    z-index: 2;
+}
+
+.colorTable
+{
+    width: 1317px;
+}
+
+.colorTable tr:nth-child(2n+1)
+{
+    background: #F0F0F0;
+    z-index: 1;
+}
+
+th
+{
+    height: 35px;
+    background: #A0A0A0;
+}
+
+td,
+th
+{
+    height: 35px;
+    position: relative;
+    outline: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.timetable tr:hover
+{
+    background-color: #D0D0D0;
+}
+
+.timetable td:hover::after
+{
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+    background-color: #D0D0D0;
+}
+
+img
+{
+    height: 30px;
+}
+
+td:nth-child(1)
+{
+    width: 90px;
+}
+
+td:nth-child(2)
+{
+    width: 234px;
+}
+
+td:nth-child(3)
+{
+    width: 110px;
+}
+
+td:nth-child(4)
+{
+    width: 234px;
+}
+
+td:nth-child(5)
+{
+    width: 163px;
+}
+
+td:nth-child(5)
+{
+    width: 148px;
+}
+
+td:nth-child(6)
+{
+    width: 47px;
+}
+
+td:nth-child(7)
+{
+    width: 73px;
+}
+
+td:nth-child(8)
+{
+    width: 50px;
+}
+
+td:nth-child(9),
+th:nth-child(9)
+{
+    width: 162px;
+}
+
+#sendToTel input[type="submit"]
+{
+    display: none;
+}
+
+#sendToTel:valid input[type="submit"]
+{
+    display: inline;
+}
+
+.telForm
+{
+    text-align: left;
+}
+
+.colorTable tr:last-child
+{
+    background: none;
+}
+
+input[value='Москва'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Москва'])
+{
+    display: none;
+}
+
+input[value='Симферополь'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Симферополь'])
+{
+    display: none;
+}
+
+input[value='Касабланка'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Касабланка'])
+{
+    display: none;
+}
+
+input[value='Дюссельдорф'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Дюссельдорф'])
+{
+    display: none;
+}
+
+input[value='Киев'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Киев'])
+{
+    display: none;
+}
+
+input[value='Волгоград'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Волгоград'])
+{
+    display: none;
+}
+
+#fromSearch[value='Таллин'] ~ table tr:not(:only-child):not(.trForm):not([data-from='Таллин'])
+{
+    display: none;
+}
+
+#departure:not(:checked) ~ table tr:not(:only-child):not(.trForm)[data-type='departure']
+{
+    display: none;
+}
+
+#arrival:not(:checked) ~ table tr:not(:only-child):not(.trForm)[data-type='arrival']
+{
+    display: none;
+}
+
+#dTerm:not(:checked) ~ table tr:not(:only-child):not(.trForm)[data-term='D']
+{
+    display: none;
+}
+
+#eTerm:not(:checked) ~ table tr:not(:only-child):not(.trForm)[data-term='E']
+{
+    display: none;
+}
+
+#fTerm:not(:checked) ~ table tr:not(:only-child):not(.trForm)[data-term='F']
+{
+    display: none;
+}
+
+

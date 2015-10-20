@@ -1,27 +1,22 @@
 table {
     overflow: hidden;
-    position: absolute;
+    position: relative;
 }
 
-.timetable
+tr:nth-child(2n+1) td:after
 {
-    z-index: 2;
-}
-
-.colorTable
-{
-    width: 1317px;
-}
-
-.colorTable tr:nth-child(2n+1)
-{
+    content: "";
     background: #F0F0F0;
-    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
 }
 
 th
 {
-    height: 35px;
     background: #A0A0A0;
 }
 
@@ -35,19 +30,19 @@ th
     text-align: center;
 }
 
-.timetable tr:hover
+tr:hover
 {
     background-color: #D0D0D0;
 }
 
-.timetable td:hover::after
+td:hover::after
 {
     content: '';
     height: 10000px;
-    left: 0;
     position: absolute;
     top: -5000px;
     width: 100%;
+    left: 0;
     z-index: -1;
     background-color: #D0D0D0;
 }
@@ -55,57 +50,6 @@ th
 img
 {
     height: 30px;
-}
-
-td:nth-child(1)
-{
-    width: 90px;
-}
-
-td:nth-child(2)
-{
-    width: 234px;
-}
-
-td:nth-child(3)
-{
-    width: 110px;
-}
-
-td:nth-child(4)
-{
-    width: 234px;
-}
-
-td:nth-child(5)
-{
-    width: 163px;
-}
-
-td:nth-child(5)
-{
-    width: 148px;
-}
-
-td:nth-child(6)
-{
-    width: 47px;
-}
-
-td:nth-child(7)
-{
-    width: 73px;
-}
-
-td:nth-child(8)
-{
-    width: 50px;
-}
-
-td:nth-child(9),
-th:nth-child(9)
-{
-    width: 162px;
 }
 
 #sendToTel input[type="submit"]

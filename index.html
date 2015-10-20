@@ -6,13 +6,316 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
         <input
+            id="fromSearch"
             type="text"
             placeholder="Город отправления"
             value=""
             onkeyup="this.setAttribute('value', this.value)">
+        <input id="departure" type="checkbox" checked>
+        <label for="departure">Отправление</label>
+        <input id="arrival" type="checkbox" checked>
+        <label for="arrival">Прибытие</label>
+        Терминалы:
+        <input id="dTerm" type="checkbox" checked>
+        <label for="dTerm">D</label>
+        <input id="fTerm" type="checkbox" checked>
+        <label for="fTerm">A</label>
+        <input id="eTerm" type="checkbox" checked>
+        <label for="eTerm">E</label>
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Тип рейса</th>
+                    <th>Номер рейса</th>
+                    <th>Авиакомпания</th>
+                    <th>Логотип</th>
+                    <th>Тип воздушного судна</th>
+                    <th>Аэропорт назначения</th>
+                    <th>Время</th>
+                    <th>Терминал</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr data-from="Москва" data-type="departure"  data-term="D">
+                <td>Отправление</td>
+                <td>SU 1274 Москва - Краснодар</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А320</td>
+                <td>Пашковский</td>
+                <td>21:15</td>
+                <td>D</td>
+                <td>Летит</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure"  data-term="D">
+                <td>Отправление</td>
+                <td>SU 1866 Москва - Ереван</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А320</td>
+                <td>Звартноц</td>
+                <td>21:35</td>
+                <td>D</td>
+                <td>По расписанию</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure"  data-term="D">
+                <td>Отправление</td>
+                <td>SU 204 Москва - Пекин</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Boeing 777-300ER</td>
+                <td>Пекин</td>
+                <td>21:35</td>
+                <td>D</td>
+                <td>Задерживается до 22:00</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure"  data-term="D">
+                <td>Отправление</td>
+                <td>SU 1250 Москва - Нижнекамск</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А320</td>
+                <td>Бегишево</td>
+                <td>21:40</td>
+                <td>D</td>
+                <td>Ожидание посадки</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure"  data-term="D">
+                <td>Отправление</td>
+                <td>SU 5302 Москва - Ростов-на-Дону</td>
+                <td>Донавиа</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/a_don.gif"
+                         alt="Логотип компании 'Донавия'"/>
+                </td>
+                <td>Airbus A319</td>
+                <td>Ростов-на-Дону</td>
+                <td>21:45</td>
+                <td>D</td>
+                <td>Посадка закончена</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure" data-term="D">
+                <td>Отправление</td>
+                <td>SU 1510 Москва - Сургут</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А320</td>
+                <td>Сургут</td>
+                <td>21:50</td>
+                <td>D</td>
+                <td>Регистрация</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure"  data-term="D">
+                <td>Отправление</td>
+                <td>SU 1430 Москва - Барнаул</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А321</td>
+                <td>имени Г. С. Титова</td>
+                <td>21:50</td>
+                <td>D</td>
+                <td>Регистрация</td>
+            </tr>
+            <tr data-from="Москва" data-type="departure" data-term="D">
+                <td>Отправление</td>
+                <td>SU 1882 Москва - Бишкек</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А321</td>
+                <td>Манас</td>
+                <td>21:55</td>
+                <td>D</td>
+                <td>Регистрация</td>
+            </tr>
+            <tr data-from="Касабланка" data-type="arrival" data-term="E">
+                <td>Прибытие</td>
+                <td>AT 220 Касабланка - Москва</td>
+                <td><abbr title="Royal Air Maroc">RAM</abbr></td>
+                <td>
+                    <img src="https://upload.wikimedia.org/wikipedia/ru/5/52/Royal_Air_Maroc.png"
+                         alt="Логотип компании 'Royal Air Maroc'"/>
+                </td>
+                <td>Embraer ERJ-190</td>
+                <td>Шереметьево</td>
+                <td>21:40</td>
+                <td>E</td>
+                <td>Приземлился</td>
+            </tr>
+            <tr data-from="Касабланка" data-type="arrival" data-term="E">
+                <td>Прибытие</td>
+                <td>SU 3951 Касабланка - Москва</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Embraer ERJ-190</td>
+                <td>Шереметьево</td>
+                <td>21:40</td>
+                <td>E</td>
+                <td>Приземлился</td>
+            </tr>
+            <tr data-from="Дюссельдорф" data-type="arrival"  data-term="D">
+                <td>Прибытие</td>
+                <td>SU 2155 Дюссельдорф - Москва</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А320</td>
+                <td>Шереметьево</td>
+                <td>22:05</td>
+                <td>D</td>
+                <td>Летит</td>
+            </tr>
+            <tr  data-from="Киев" data-type="arrival"  data-term="D">
+                <td>Прибытие</td>
+                <td>SU 1819 Киев - Москва</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Sukhoi superjet 100</td>
+                <td>Шереметьево</td>
+                <td>22:10</td>
+                <td>D</td>
+                <td>Летит</td>
+            </tr>
+            <tr data-from="Симферополь" data-type="arrival" data-term="D">
+                <td>Прибытие</td>
+                <td>SU 1625 Симферополь - Москва</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Airbus А330-200</td>
+                <td>Шереметьево</td>
+                <td>21:30</td>
+                <td>D</td>
+                <td>Приземлился</td>
+            </tr>
+            <tr data-from="Таллин" data-type="arrival" data-term="E">
+                <td>Прибытие</td>
+                <td>OV 7305 Таллин - Москва</td>
+                <td>EstonianAr</td>
+                <td>
+                    <img src="http://estonian-air.ee/wp-content/themes/estonian_air/gfx/estonian_air.png"
+                         alt="Логотип компании 'EstoniaAir'"/>
+                </td>
+                <td>Airbus A319</td>
+                <td>Шереметьево</td>
+                <td>22:15</td>
+                <td>E</td>
+                <td>Летит</td>
+            </tr>
+            <tr data-from="Волгоград" data-type="arrival"  data-term="F">
+                <td>Прибытие</td>
+                <td>SU 1187 Волгоград - Москва</td>
+                <td>Аэрофлот</td>
+                <td>
+                    <img src="https://yandex.st/rasp/media/data/company/logo/aeroflot_logo_ru.gif"
+                         alt="Логотип компании 'Аэрофлот'" height="30"/>
+                </td>
+                <td>Sukhoi superjet 100</td>
+                <td>Шереметьево</td>
+                <td>22:10</td>
+                <td>F</td>
+                <td>Задерживается до 22:35</td>
 
-        <!-- Здесь применять вашу самую сильную магию -->
+            </tr>
+            </tbody>
+        </table>
+        <table class="colorTable">
+            <thead>
+            <tr>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr data-from="Москва" data-type="departure"  data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure"  data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure"  data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure"  data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure" data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure" data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure" data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Москва" data-type="departure" data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Касабланка" data-type="arrival" data-term="E">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Касабланка" data-type="arrival" data-term="E">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Дюссельдорф" data-type="arrival"  data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Киев" data-type="arrival"  data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Симферополь" data-type="arrival" data-term="D">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Таллин" data-type="arrival" data-term="E">
+                    <td colspan="9"></td>
+                </tr>
+                <tr data-from="Волгоград" data-type="arrival"  data-term="F">
+                    <td colspan="9"></td>
+                </tr>
+                <tr class="trForm">
+                    <td class="telForm">Отправить данные о рейсе на телефон: </td>
+                </tr>
+                <tr class="trForm">
+                    <td class="telForm">
+                        <form id="sendToTel" name="sendToTel">
+                            <label for="tel">Телефон: <input id="tel" type="tel" required/></label>
+                            <label for="email">Email: <input id="email" type="email" required/></label>
+                            <input type="submit" value="Отправить данные на телефон">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>

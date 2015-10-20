@@ -4,7 +4,7 @@ table {
     border-spacing: 0;
 }
 
-tr:nth-child(2n+1) td:after
+tr:nth-child(2n+1) td:before
 {
     content: "";
     background: #F0F0F0;

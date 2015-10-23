@@ -7,7 +7,7 @@ table {
 tr:nth-child(2n+1) td:before
 {
     content: "";
-    background: #F0F0F0;
+    background: #f0f0f0;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -18,7 +18,7 @@ tr:nth-child(2n+1) td:before
 
 th
 {
-    background: #A0A0A0;
+    background: #a0a0a0;
 }
 
 td,
@@ -31,11 +31,6 @@ th
     text-align: center;
 }
 
-tr:hover
-{
-    background-color: #D0D0D0;
-}
-
 td:hover::after
 {
     content: '';
@@ -45,7 +40,12 @@ td:hover::after
     width: 100%;
     left: 0;
     z-index: -1;
-    background-color: #D0D0D0;
+    background-color: #d0d0d0;
+}
+
+tr:hover
+{
+    background-color: #d0d0d0;
 }
 
 img
@@ -132,4 +132,3 @@ input[value='Волгоград'] ~ table tr:not(:only-child):not(.trForm):not([
 {
     display: none;
 }
-
